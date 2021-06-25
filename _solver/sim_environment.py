@@ -49,10 +49,10 @@ class SimulationEnvironment:
 
         # hard code actions for now. Future versions will utilize config file.
         if 'price' not in actions or not actions['price']:
-            actions['price'] = tuple(np.linspace(trader['bid_price'], trader['ask_price'], 15))
-
+            # actions['price'] = tuple(np.linspace(trader['bid_price'], trader['ask_price'], 30))
+            actions['price'] = tuple(np.linspace(0.05, 0.2, 30))
         if 'quantity' not in actions or not actions['quantity']:
-            actions['quantity'] = tuple(range(12, 25, 1))
+            actions['quantity'] = tuple(range(1, 100, 2))
 
         # actions['price'] = tuple(np.linspace(trader['bid_price'], trader['ask_price'], 3))
         # actions['price'] = tuple(np.array([0.1]))
